@@ -14,15 +14,14 @@ For i = 0 to n-2
       minIndex = j
   swap list[i] with list[minIndex]
 ```
-### Memory Space
-θ(1)
+## Stats
+Memory Space | Running Time
+--- | --- |
+θ(1) | θ(n^2)
 
-### Running Time
-T(n)= θ(n^2)
-
-### Stable? No
-
-### In-Place? Yes
+Stable? |  In-place?
+--- | --- |
+No | Yes
 
 # Bubble Sort
 
@@ -40,16 +39,15 @@ For i = 0 to n – 2, increasing by 1 each time
 		  Swap value at index j with value at index j+1
 ```
 
-### Memory Space
-θ(1)
+## Stats
+Memory Space | Running Time
+--- | --- |
+θ(1) | Worst Case (need to sort through all sub-lists): θ(n^2)
+-- | Best Case (list is already sorted): θ(n)
 
-###	Running Time
-- Worst Case (need to sort through all sub-lists): T(n)=θ(n^2 )
-- Best Case (list is already sorted): T(n)=θ(n)
-
-### Stable? Yes
-
-### In-Place? Yes
+Stable? |  In-place?
+--- | --- |
+Yes | Yes
 
 # Insertion Sort
 
@@ -63,19 +61,21 @@ for i = 1 to list.len-1
     j = j-1
     list[j] = temp
 ```
-### Memory Space
-θ(1)
-### Running Time
-- Worst Case (swap every time): T(n)=θ(n^2 )
-- Best Case (no swaps):  T(n)=θ(n)
-- Average Case (half of possible swaps occur): T(n)=θ(n^2)
-### Stable? Yes
-### In-Place? Yes
 
+## Stats
+Memory Space | Running Time
+--- | --- |
+θ(1) | Worst Case (swap every time): θ(n^2)
+-- | Best Case (no swaps):  T(n)=θ(n)
+-- | Average Case (half of possible swaps occur): θ(n^2)
+
+Stable? |  In-place?
+--- | --- |
+Yes | Yes
 
 # Merge Sort
 
-### Algorithm
+### Pseudocode
 - If the array has only one element (or is empty), it is already sorted
 - Merge sort the left half of the array
 - Merge sort the right half of the array
@@ -112,16 +112,126 @@ function mergesort(A)
   end
 end
 ```
-###	Running Times
-- Merge operation: Θ(n)
-- Merge sort: Θ(n∗lg⁡n) for all cases
-		
-### Space: Θ(n)
-### In place? No
-### Stable? Yes
 
+## Stats
+Memory Space | Running Time
+--- | --- |
+Θ(n) | Merge operation: Θ(n)
+-- | Merge sort: Θ(n∗lg⁡n) for all cases
+
+Stable? |  In-place?
+--- | --- |
+Yes | No
 
 # Quick Sort
+
+## Pseudocode
+
+### Partition
+```
+partition( array, start, end )
+  pivot = arr[end], t = start
+  for i = start to end –1
+    if arr[i] <= pivot
+      swap arr[i] and arr[t]
+      t++
+  swap arr[t] and arr[end]
+  return t
+```
+### Quick Sort
+```
+quickSort( array, start, end )
+  if start < end
+    index = partition( array, start, end )
+    quickSort( array, start, index -1 )
+    quickSort( array, index + 1, end )
+```
+
+## Stats
+Memory Space | Running Time
+--- | --- |
+Θ(1) | Best Case & Average Case: Θ(n*lg(n))
+-- | Worst Case: Θ(n^2)
+-- |  Partition: Θ(n)
+
+Stable? |  In-place?
+--- | --- |
+No (b/c of swap at end of partition) | Yes
+
 # Heap Sort
+
+## Algorithm
+```
+Convert complete binary tree (CBT) to max heap
+For 1 = n to 2:
+  Swap node 1 (root) w/ node i
+  Max heapify root node on tree ignoring index i and up
+```
+## Stats
+Memory Space | Running Time
+--- | --- |
+Θ(1) | Best Case (all elements identical): Θ(n)
+-- | Worst Case: Θ(n*lg(n))
+
+Stable? |  In-place?
+--- | --- |
+No | Yes
+
 # Counting Sort
+Sorts a list `A` of non-negative integers
+
+## Pseudocode
+`A` is a list of length `n` with maximum value `k`
+```
+LOC = array of zeros of length k+1
+ANEW = array of zeros of length n
+
+// Count version of LOC
+for i = 0 to n-1
+  LOC[A[i]] = LOC[A[i]] + 1
+end
+
+// Make LOC cumulative
+for i = 1 to k
+  LOC[i] = LOC[i] + LOC[i-1]
+end
+
+// ANEW from LOC and A
+for i = n-1 down to 0
+  ANEW[LOC[A[i]]-1] = A[i]
+  LOC[A[i]]= LOC[A[i]] -1
+end
+
+// Copy ANEW to A
+for i = 0 to n-1
+  A[i] = ANEW[i]
+end
+```
+
+## Stats
+Memory Space | Running Time
+--- | --- |
+Θ(n+k) | Average Case: Θ(n+k)
+`k` = max value in list `A`
+`n` = # element in list `A`
+
+Stable? |  In-place?
+--- | --- |
+Yes | No
+
 # Radix Sort
+
+## Pseudocode
+`A` is a list of integers
+Each integer looks like x_d ... x_1
+```
+for i = 1 to d
+  stable sort A using digit i
+```
+
+## Stats
+Memory Space | Running Time
+--- | --- |
+? | Θ(d*f)
+`d` = width of largest number
+`f` is running time of helper sorting algorithm
