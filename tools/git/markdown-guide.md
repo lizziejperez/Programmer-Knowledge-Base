@@ -1,10 +1,38 @@
 # Formatting Guidelines
 
+## Table of Content
+1. [Headers](#headers)
+2. [Links](#links)
+3. [Code](#code)
+4. [Links](#links)
+5. [File Naming](#file-naming)
+6. [Math](#math)
+7. [Font Styles](#font-styles)
+8. [Lists](#lists)
+9. [Tables](#tables)
+
 ## Headers
 - Use `#` for file title
 - Use `##` for main sections
 - Use `###` for subsections
 - Use `####` for minor subsections (avoid going deeper)
+
+## Links
+Links to headers:
+```
+[Headers link](#headers)
+
+[File Naming link](#file-naming)
+```
+[Headers link](#headers)
+
+[File Naming link](#file-naming)
+
+Links to websites: 
+```
+[Google link](https://www.google.com/)
+```
+[Google link](https://www.google.com/)
 
 ## Code
 ### Blocks
