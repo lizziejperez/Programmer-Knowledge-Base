@@ -4,7 +4,6 @@
 1. [Headers](#headers)
 2. [Links](#links)
 3. [Code](#code)
-4. [Links](#links)
 5. [File Naming](#file-naming)
 6. [Math](#math)
 7. [Font Styles](#font-styles)
