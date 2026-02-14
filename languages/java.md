@@ -1,7 +1,7 @@
 # Java Guide
 
 ## Java Class File Structure
-```
+```java
 package example.package; // optional
 
 import java.util.*; // optional - for access to other packages
@@ -19,7 +19,7 @@ public class ClassName {
 }
 ```
 ### Package
-```
+```java
 package example.package;
 ```
 - This groups related classes together.
@@ -27,7 +27,7 @@ package example.package;
 - Optional for small or single-file programs. Required in most larger projects.
 
 ### Class Declaration
-```
+```java
 public class ClassName {
 ```
 Access modifiers
@@ -46,12 +46,12 @@ final | Cannot be extended
 static | Belongs to class, not instance
 
 Example:
-```
+```java
 public final class UtilityClass {
 ```
 ## Syntax
 Comments
-```
+```java
 // one line comment
 
 /* multi-line
@@ -59,7 +59,7 @@ Comments
 */
 ```
 Variables
-```
+```java
 int num; // initialize num
 num = 1; // set num value
 
@@ -70,12 +70,12 @@ String text = "hi";
 boolean bool = true;
 ```
 Arrays
-```
+```java
 int[] arr = new int[n]; // n is the number of elements in the array
 int[] arr2 = new int[] {1, 2, 3};
 ```
 Conditionals
-```
+```java
 if(condition1) {
   <code>
 } else if(condition2) {
@@ -95,12 +95,12 @@ while(condition) {
 
 ## Useful Classes
 Print
-```
+```java
 System.out.print(<variable>);
 System.out.println(<variable>);
 ```
 Scanner
-```
+```java
 Scanner scan = new Scanner(Stystem.in);
 int num = scan.nextInt();
 double num2 = scan.nextDouble();
