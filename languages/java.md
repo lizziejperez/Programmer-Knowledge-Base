@@ -1,6 +1,50 @@
 # Java Guide
 
-## Java Class File Structure
+## Syntax
+Comments
+```java
+// one line comment
+
+/* multi-line
+* comment
+*/
+```
+Variables
+```java
+int num; // initialize num
+num = 1; // set num value
+
+double num2 = 3.1;
+
+String text = "hi";
+
+boolean bool = true;
+```
+Arrays
+```java
+int[] arr = new int[n]; // n is the number of elements in the array
+int[] arr2 = new int[] {1, 2, 3};
+```
+Conditionals
+```java
+if(condition1) {
+  // code
+} else if(condition2) {
+  // code
+} else {
+  // code
+}
+
+for(int i=0; i < max; i++) {
+  // code
+}
+
+while(condition) {
+  // code
+}
+```
+
+## Class File Structure
 ```java
 package example.package; // optional
 
@@ -49,55 +93,12 @@ Example:
 ```java
 public final class UtilityClass {
 ```
-## Syntax
-Comments
-```java
-// one line comment
-
-/* multi-line
-* comment
-*/
-```
-Variables
-```java
-int num; // initialize num
-num = 1; // set num value
-
-double num2 = 3.1;
-
-String text = "hi";
-
-boolean bool = true;
-```
-Arrays
-```java
-int[] arr = new int[n]; // n is the number of elements in the array
-int[] arr2 = new int[] {1, 2, 3};
-```
-Conditionals
-```java
-if(condition1) {
-  <code>
-} else if(condition2) {
-  <code>
-} else {
-  <code>
-}
-
-for(int i=0; i < max; i++) {
-  <code>
-}
-
-while(condition) {
-  <code>
-}
-```
 
 ## Useful Classes
 Print
 ```java
-System.out.print(<variable>);
-System.out.println(<variable>);
+System.out.print("The value of x is " + x + "\n");
+System.out.println("The value of y is " + y);
 ```
 Scanner
 ```java
