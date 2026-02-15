@@ -3,12 +3,15 @@
 ```
 Programmer-Notes/
 ├── algorithms/
+|   ├── searching.md
 │   └── sorting.md
 ├── data-science/
 |   └── r/
 |       ├── r-basics.md
 |       └── dataframes.md
 ├── fundamentals/
+|   ├── bitwise-operators.md
+|   ├── oop-concepts.md
 |   ├── programming-languages.md
 |   └── running-time.md
 ├── languages/
