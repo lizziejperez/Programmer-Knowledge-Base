@@ -1,7 +1,18 @@
-# Selection Sort
+# Sorting Algorithms
+
+1. [Selection Sort](#selection-sort)
+2. [Bubble Sort](#bubble-sort)
+3. [Insertion Sort](#insertion-sort)
+4. [Merge Sort](#merge-sort)
+5. [Quick Sort](#quick-sort)
+6. [Heap Sort](#heap-sort)
+7. [Counting Sort](#counting-sort)
+8. [Radix Sort](#radix-sort)
+
+## Selection Sort
 This sort keeps finding the smallest element and placing it in the growing sorted part (left side)
 
-## Algorithm
+### Algorithm
 - Find index of smallest element
 - Swap w/ list[0] => now list[0] is sorted
 - Repeat for following unsorted indexes
@@ -14,7 +25,7 @@ For i = 0 to n-2
       minIndex = j
   swap list[i] with list[minIndex]
 ```
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 θ(1) | θ(n^2)
@@ -23,9 +34,9 @@ Stable? |  In-place?
 --- | --- |
 No | Yes
 
-# Bubble Sort
+## Bubble Sort
 
-## Algorithm
+### Algorithm
 - Pass through the list (left to right), comparing adjacent elements
 - If out of order, swap
 - Repeat, but decrease the ending index by 1, until ending index is 0
@@ -39,7 +50,7 @@ For i = 0 to n – 2, increasing by 1 each time
 		  Swap value at index j with value at index j+1
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 θ(1) | Worst Case (need to sort through all sub-lists): θ(n^2)
@@ -49,9 +60,9 @@ Stable? |  In-place?
 --- | --- |
 Yes | Yes
 
-# Insertion Sort
+## Insertion Sort
 
-## Algorithm
+### Algorithm
 ```
 for i = 1 to list.len-1
   j = i
@@ -62,7 +73,7 @@ for i = 1 to list.len-1
     list[j] = temp
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 θ(1) | Worst Case (swap every time): θ(n^2)
@@ -73,7 +84,7 @@ Stable? |  In-place?
 --- | --- |
 Yes | Yes
 
-# Merge Sort
+## Merge Sort
 
 ### Pseudocode
 - If the array has only one element (or is empty), it is already sorted
@@ -113,7 +124,7 @@ function mergesort(A)
 end
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 Θ(n) | Merge operation: Θ(n)
@@ -123,11 +134,11 @@ Stable? |  In-place?
 --- | --- |
 Yes | No
 
-# Quick Sort
+## Quick Sort
 
-## Pseudocode
+### Pseudocode
 
-### Partition
+#### Partition
 ```
 partition( array, start, end )
   pivot = arr[end], t = start
@@ -138,7 +149,7 @@ partition( array, start, end )
   swap arr[t] and arr[end]
   return t
 ```
-### Quick Sort
+#### Quick Sort
 ```
 quickSort( array, start, end )
   if start < end
@@ -147,7 +158,7 @@ quickSort( array, start, end )
     quickSort( array, index + 1, end )
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 Θ(1) | Best Case & Average Case: Θ(n*lg(n))
@@ -158,16 +169,16 @@ Stable? |  In-place?
 --- | --- |
 No (b/c of swap at end of partition) | Yes
 
-# Heap Sort
+## Heap Sort
 
-## Algorithm
+### Algorithm
 ```
 Convert complete binary tree (CBT) to max heap
 For 1 = n to 2:
   Swap node 1 (root) w/ node i
   Max heapify root node on tree ignoring index i and up
 ```
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 Θ(1) | Best Case (all elements identical): Θ(n)
@@ -177,10 +188,10 @@ Stable? |  In-place?
 --- | --- |
 No | Yes
 
-# Counting Sort
+## Counting Sort
 Sorts a list `A` of non-negative integers
 
-## Pseudocode
+### Pseudocode
 `A` is a list of length `n` with maximum value `k`
 ```
 LOC = array of zeros of length k+1
@@ -208,7 +219,7 @@ for i = 0 to n-1
 end
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 Θ(n+k) | Average Case: Θ(n+k)
@@ -219,9 +230,9 @@ Stable? |  In-place?
 --- | --- |
 Yes | No
 
-# Radix Sort
+## Radix Sort
 
-## Pseudocode
+### Pseudocode
 `A` is a list of integers
 Each integer looks like x_d ... x_1
 ```
@@ -229,7 +240,7 @@ for i = 1 to d
   stable sort A using digit i
 ```
 
-## Stats
+### Stats
 Memory Space | Running Time
 --- | --- |
 ? | Θ(d*f)
