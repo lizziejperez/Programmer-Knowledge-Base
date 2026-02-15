@@ -1,7 +1,7 @@
 # Java Guide
 
 ## Syntax
-Comments
+### Comments
 ```java
 // one line comment
 
@@ -9,23 +9,23 @@ Comments
 * comment
 */
 ```
-Variables
+### Variables
 ```java
-int num; // initialize num
-num = 1; // set num value
+int num; // declaration
+num = 1; // assignment
 
-double num2 = 3.1;
+double num2 = 3.1; // declaration + initialization
 
 String text = "hi";
 
 boolean bool = true;
 ```
-Arrays
+### Arrays
 ```java
 int[] arr = new int[n]; // n is the number of elements in the array
 int[] arr2 = new int[] {1, 2, 3};
 ```
-Conditionals
+### Conditionals
 ```java
 if(condition1) {
   // code
