@@ -238,6 +238,11 @@ Used to combine or invert boolean expressions.
 | \|\| | Logical OR | a \|\| b |
 | ! | Logical NOT | !a |
 
+#### Short-Circuit Behavior
+C# uses short-circuit evaluation:
+- `&&` stops if the first condition is false.
+- `||` stops if the first condition is true.
+
 ## Common Built-in Classes
 Console (non-Unity)
 ```csharp
