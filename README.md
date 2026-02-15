@@ -6,9 +6,11 @@ Programmer-Notes/
 |   ├── searching.md
 │   └── sorting.md
 ├── data-science/
-|   └── r/
-|       ├── r-basics.md
-|       └── dataframes.md
+|   ├── r/
+|   |   ├── r-basics.md
+|   |   └── dataframes.md
+|   └── statistics/
+|       └── sampling-theory.md
 ├── fundamentals/
 |   ├── bitwise-operators.md
 |   ├── oop-concepts.md
