@@ -17,7 +17,8 @@ Programmer-Notes/
 |   ├── programming-languages.md
 |   └── running-time.md
 ├── languages/
-│   └── java.md
+|   ├── java.md
+│   └── javascript.md
 ├── tools/
 │   ├── git/
 |   |   ├── commit-guide.md
