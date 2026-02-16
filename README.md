@@ -19,7 +19,8 @@ Programmer-Notes/
 ├── languages/
 |   ├── csharp.md
 |   ├── java.md
-│   └── javascript.md
+|   ├── javascript.md
+│   └── python.md
 ├── tools/
 │   ├── git/
 |   |   ├── commit-guide.md
