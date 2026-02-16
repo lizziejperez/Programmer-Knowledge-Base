@@ -227,6 +227,101 @@ type MathOperation = (a: number, b: number) => number;
 const subtract: MathOperation = (a, b) => a - b;
 ```
 
+## Classes
+
+TypeScript supports classes with typed fields and methods.
+
+### Basic Class
+
+```typescript
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(): string {
+        return `Hello, my name is ${this.name}`;
+    }
+}
+
+let p = new Person("Lizzie", 27);
+p.greet();
+```
+
+### Access Modifiers
+TypeScript supports access modifiers inside classes.
+| Modifier  | Meaning                                |
+| --------- | -------------------------------------- |
+| public    | Accessible anywhere (default)          |
+| private   | Accessible only within the class       |
+| protected | Accessible within class and subclasses |
+| readonly  | Cannot be changed after initialization |
+
+
+Example:
+
+```typescript
+class User {
+    public name: string;
+    private password: string;
+    readonly id: number;
+
+    constructor(name: string, password: string, id: number) {
+        this.name = name;
+        this.password = password;
+        this.id = id;
+    }
+}
+```
+
+### Parameter Properties (Shortcut)
+
+You can declare and initialize fields directly in the constructor:
+
+```typescript
+class User {
+    constructor(
+        public name: string,
+        private password: string,
+        readonly id: number
+    ) {}
+}
+```
+
+### Inheritance
+
+```typescript
+class Animal {
+    move(): void {
+        console.log("Moving...");
+    }
+}
+
+class Dog extends Animal {
+    bark(): void {
+        console.log("Woof!");
+    }
+}
+```
+
+### Implementing Interfaces
+
+```typescript
+interface Printable {
+    print(): void;
+}
+
+class Document implements Printable {
+    print(): void {
+        console.log("Printing...");
+    }
+}
+```
+
 ## Union Types (`|`)
 
 A union type allows a variable to hold more than one type.
