@@ -24,7 +24,8 @@ Programmer-Notes/
 |   ├── csharp.md
 |   ├── java.md
 |   ├── javascript.md
-│   └── python.md
+|   ├── python.md
+│   └── typescript.md
 ├── tools/
 │   ├── git/
 |   |   ├── commit-guide.md
