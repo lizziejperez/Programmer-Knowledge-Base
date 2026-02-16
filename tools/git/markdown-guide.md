@@ -49,19 +49,9 @@ The `code` is in-line.
 
 ## Math
 
-### In-line math:
-
-Make sure you use `$ ... $` for inline math
-
-Example:
-```
-$ \mu = \frac{1}{n} \sum_{i=1}^{n} x_i $
-```
-$ \mu = \frac{1}{n} \sum_{i=1}^{n} x_i $
-
 ### Block math:
 
-Make sure you use `$$ ... $$` for block equations
+Use `$$ ... $$` for block equations
 
 Example:
 ```
