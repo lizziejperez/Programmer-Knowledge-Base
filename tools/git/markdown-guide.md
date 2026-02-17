@@ -18,7 +18,7 @@
 
 ## Links
 Links to headers:
-```
+```markdown
 [Headers link](#headers)
 
 [File Naming link](#file-naming)
@@ -28,7 +28,7 @@ Links to headers:
 [File Naming link](#file-naming)
 
 Links to websites: 
-```
+```markdown
 [Google link](https://www.google.com/)
 ```
 [Google link](https://www.google.com/)
@@ -37,7 +37,7 @@ Links to websites:
 ### Blocks
 Use triple backticks with language specified.
 ### In-line
-```
+```markdown
 The `code` is in-line.
 ```
 The `code` is in-line.
@@ -54,7 +54,7 @@ The `code` is in-line.
 Use `$$ ... $$` for block equations
 
 Example:
-```
+```markdown
 $$
 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
 $$
@@ -66,19 +66,19 @@ $$
 ## Font Styles
 
 ### Bold
-```
+```markdown
 **Bold**
 ```
 **Bold**
 
 ### Italic
-```
+```markdown
 *Italic*
 ```
 *Italic*
 
 ### Bold & Italic
-```
+```markdown
 ***Bold & Italic***
 ```
 ***Bold & Italic***
@@ -86,7 +86,7 @@ $$
 ## Lists
 
 ### Ordered
-```
+```markdown
 1. item one
 2. item two
     1. item three
@@ -96,7 +96,7 @@ $$
     1. item three
 
 ### Unordered
-```
+```markdown
 - A
 - B
     - C
@@ -106,7 +106,7 @@ $$
     - C
 
 ## Tables
-```
+```markdown
 | column 1 | column 2 |
 | --- | --- |
 | A  |  B |
