@@ -42,12 +42,14 @@ Need to explicitly give a type to a variable
 ## Language Classification Examples
 
 | Language | OOP | Functional | Procedural | Logic | Static Typing | Dynamic Typing |
-|----------|-----|------------|------------|-------|--------------|---------------|
-| Java     | ✓   | Partial    | ✓          | ✗     | ✓            | ✗             |
-| C++      | ✓   | Partial    | ✓          | ✗     | ✓            | ✗             |
-| Python   | ✓   | ✓          | ✓          | ✗     | ✗            | ✓             |
-| C        | ✗   | ✗          | ✓          | ✗     | ✓            | ✗             |
-| Haskell  | ✗   | ✓ (Pure)   | ✗          | ✗     | ✓            | ✗             |
-| Prolog   | ✗   | ✗          | ✗          | ✓     | Dynamic      | ✓             |
-| Ruby     | ✓   | Partial    | ✓          | ✗     | ✗            | ✓             | 
-| OCaml    | ✓   | ✓ (Primary) | ✓        | ✗     | ✓      | ✗      |
+|---|---|---|---|---|---|---|
+| Java | ✓ | Partial | ✓ | ✗ | ✓ | ✗ |
+| C++ | ✓ | Partial | ✓ | ✗ | ✓ | ✗ |
+| Python | ✓ | ✓ | ✓ | ✗ | ✗ | ✓ |
+| C | ✗ | ✗ | ✓ | ✗ | ✓ | ✗ |
+| Haskell | ✗ | ✓ (Pure) | ✗ | ✗ | ✓ | ✗ |
+| Prolog | ✗ | ✗  | ✗ | ✓ | ✗ | ✓ |
+| Ruby | ✓ | Partial | ✓ | ✗ | ✗ | ✓ |
+| OCaml | ✓ | ✓ (Primary) | ✓ | ✗ | ✓ | ✗ |
+| JavaScript | ✓ | ✓ | ✓ | ✗ | ✗ | ✓ |
+| C# | ✓ | Partial | ✓ | ✗ | ✓ | ✗ |
