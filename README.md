@@ -14,7 +14,8 @@ Programmer-Notes/
 |   └── statistics/
 |       └── sampling-theory.md
 ├── data-structures/
-|   └── arrays.md
+|   ├── arrays.md
+|   └── linked-lists.md
 ├── fundamentals/
 |   ├── bitwise-operators.md
 |   ├── oop-concepts.md
