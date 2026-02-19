@@ -74,6 +74,7 @@ Programmer-Notes/
 ├── tools/
 │   ├── git/
 |   |   ├── commit-guide.md
+|   |   ├── gitignore-guide.md
 |   |   └── markdown-guide.md
 |   └── linux-shell-cheatsheet.md
 ├── web/
