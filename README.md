@@ -11,6 +11,8 @@ Programmer-Notes/
 |   |   └── dataframes.md
 |   └── statistics/
 |       └── sampling-theory.md
+├── data-structures/
+|   └── arrays.md
 ├── fundamentals/
 |   ├── bitwise-operators.md
 |   ├── oop-concepts.md
