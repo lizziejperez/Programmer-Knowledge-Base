@@ -80,6 +80,7 @@ Programmer-Notes/
 ├── web/
 |   ├── frontend/
 |   │   ├── css-layout.md
+|   │   ├── flexbox-vs-grid.md
 |   |   └── html-basics.md
 │   └── fundamentals/
 |       ├── client-vs-server.md
@@ -171,8 +172,6 @@ web/
 ├── fundamentals/
 │   └── dns-and-ip.md
 ├── frontend/
-│   ├── css-layout.md
-│   ├── flexbox-vs-grid.md
 │   ├── dom-manipulation.md
 │   ├── async-await.md
 │   └── api-calls.md
