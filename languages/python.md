@@ -223,3 +223,97 @@ if x is None:
 ```
 
 Use is None instead of == None.
+
+
+# Testing with Pytest
+
+`pytest` is a popular testing framework for Python projects.
+
+It automatically discovers and runs test files without requiring a test runner script.
+
+## Installation
+
+If using a `pyproject.toml` with development dependencies:
+
+```toml
+[project.optional-dependencies]
+dev = ["pytest"]
+```
+
+Install with:
+
+```bash
+pip install -e ".[dev]"
+```
+
+Or install directly:
+
+```bash
+pip install pytest
+```
+
+## Project Structure
+
+Recommended layout:
+```
+project-root/
+├── src/
+│   └── package_name/
+├── tests/
+│   ├── test_module1.py
+│   └── test_module2.py
+├── pyproject.toml
+```
+
+Application code lives in `src/`
+
+Test files live in `tests/`
+
+## Test File Naming Rules
+
+Pytest automatically discovers:
+
+- Files named `test_*.py` or `*_test.py`
+- Functions named `test_*`
+
+Example:
+```python
+def test_addition():
+    assert 2 + 2 == 4
+```
+
+## Running Tests
+
+From the project root:
+```bash
+pytest
+```
+Example output:
+```
+5 passed
+```
+
+## Useful Pytest Options
+
+Run tests with more detail:
+```bash
+pytest -v
+```
+
+Run a specific test file:
+```bash
+pytest tests/test_token.py
+```
+
+Run a specific test function:
+```bash
+pytest tests/test_token.py::test_addition
+```
+
+## Why Use Pytest?
+
+- Automatic test discovery
+- Simple assert syntax
+- Clean output
+- Scales from small scripts to large applications
+- Widely used in professional Python projects
