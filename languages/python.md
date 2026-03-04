@@ -317,3 +317,56 @@ pytest tests/test_token.py::test_addition
 - Clean output
 - Scales from small scripts to large applications
 - Widely used in professional Python projects
+
+# Python Dataclasses (`@dataclass`)
+
+What is a Dataclass?
+
+A **dataclass** is a Python feature that automatically generates common methods for classes that primarily store data.
+
+Instead of manually writing boilerplate code like:
+
+- `__init__`
+- `__repr__`
+- `__eq__`
+
+Python can generate them automatically.
+
+Example without dataclass:
+```python
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+```
+Using `@dataclass`:
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Point:
+    x: int
+    y: int
+```
+Python automatically creates the constructor and other useful methods.
+
+## `@dataclass(frozen=True)`
+
+`frozen=True` makes the dataclass **immutable**.
+
+This means once the object is created, its fields cannot be modified.
+
+Example:
+```python
+from dataclasses import dataclass
+
+@dataclass(frozen=True)
+class Token:
+    kind: str
+    value: str
+```
+Attempting to modify a field will raise an error:
+```python
+token = Token("INT", "10")
+token.value = "20"   # ❌ Error
+```
