@@ -7,6 +7,7 @@ Current topics:
 * Arrays
 * Linked Lists
 * Trees
+* Heaps
 
 ## Structure
 
