@@ -6,6 +6,7 @@ Current topics:
 
 * Arrays
 * Linked Lists
+* Trees
 
 ## Structure
 

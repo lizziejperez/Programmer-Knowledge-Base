@@ -51,7 +51,8 @@ Programmer-Notes/
 |       └── sampling-theory.md
 ├── data-structures/
 |   ├── arrays.md
-|   └── linked-lists.md
+|   ├── linked-lists.md
+|   └── trees.md
 ├── fundamentals/
 |   ├── paradigms/
 |   |   └── oop.md
