@@ -1,74 +1,52 @@
 # Linked Lists
 
-A **linked list** is a linear data structure where each element (**node**) stores:
+A **linked list** is a linear data structure where each node stores data and a reference to the next node.
 
-- **data**
-- a **reference (pointer)** to the next node (and sometimes the previous node)
+## Table of Contents
 
-Unlike arrays, linked lists do **not** require contiguous memory.
+* [Key Characteristics](#1-key-characteristics)
+* [Time Complexity](#2-time-complexity)
+* [Structure](#3-structure)
+* [Common Operations](#4-common-operations)
+* [Variants](#5-variants)
+* [Use Cases](#6-use-cases)
+* [Advantages & Disadvantages](#7-advantages--disadvantages)
+* [Interview Patterns](#8-interview-patterns)
+* [Memory Notes](#9-memory-notes)
+* [Arrays vs Linked Lists](#10-arrays-vs-linked-lists)
+* [Important Concepts](#11-important-concepts)
+* [Common Bugs](#12-common-bugs)
 
-## Key Idea
+## 1. Key Characteristics
 
-Nodes are connected like a chain:
+* Non-contiguous memory
+* Dynamic size
+* Sequential access
+* Uses pointers (references)
+
+## 2. Time Complexity
+
+| Operation       | Time         |
+| --------------- | ------------ |
+| Access by index | O(n)         |
+| Search          | O(n)         |
+| Insert at head  | O(1)         |
+| Insert at tail  | O(1) or O(n) |
+| Insert middle   | O(n)         |
+| Delete at head  | O(1)         |
+| Delete middle   | O(n)         |
+
+Tail insertion is O(1) only if a tail pointer is maintained.
+
+## 3. Structure
 
 ```
-[Data | Next] -> [Data | Next] -> [Data | Next] -> null
+[Data | Next] → [Data | Next] → [Data | Next] → null
 ```
 
-Because nodes can live anywhere in memory, insertion/removal can be efficient (no shifting).
-
-## Types of Linked Lists
-
-### Singly Linked List
-
-Each node points to the next node.
-
-```
-head -> A -> B -> C -> null
-```
-
-### Doubly Linked List
-
-Each node points to both next and previous nodes.
-
-```
-null <- A <-> B <-> C -> null
-```
-
-### Circular Linked List
-
-Last node points back to the head.
-
-```
-A -> B -> C -> A
-```
-
-## Time Complexity
-
-Let `n` be the number of nodes.
-
-| Operation                    | Time |
-|-----------------------------|------|
-| Access by index (`get(i)`)  | `O(n)` |
-| Search (unsorted)           | `O(n)` |
-| Insert at head              | `O(1)` |
-| Insert at tail*             | `O(1)` or `O(n)` |
-| Insert in middle            | `O(n)` |
-| Delete at head              | `O(1)` |
-| Delete in middle            | `O(n)` |
-
-\* Tail insertion is `O(1)` **only if** you store a tail pointer; otherwise you must traverse to the end (`O(n)`).
-
-## Memory Notes
-
-- Linked lists have **extra memory overhead** for pointers.
-- Not cache-friendly compared to arrays (nodes are scattered in memory).
-
-## Common Operations
+## 4. Common Operations
 
 ### Traversal
-
-Walk from head node to end:
 
 ```
 current = head
@@ -76,53 +54,98 @@ while current != null:
     current = current.next
 ```
 
-### Insert at Head (Singly)
+### Insert at Head
 
-New node becomes the head:
-
-1. newNode.next = head
-2. head = newNode
+```
+newNode.next = head
+head = newNode
+```
 
 ### Delete at Head
 
-1. head = head.next
+```
+head = head.next
+```
 
-## Arrays vs Linked Lists
+## 5. Variants
 
-| Feature           | Array         | Linked List     |
-|------------------|--------------|-----------------|
-| Random access     | `O(1)`        | `O(n)`          |
-| Insert/delete mid | `O(n)`        | `O(1)`*         |
-| Memory layout     | Contiguous    | Non-contiguous  |
-| Memory overhead   | Low           | Higher (pointers) |
-| Cache friendly    | Yes           | No              |
+### Singly Linked List
 
-\* `O(1)` only if you already have the node reference; finding it still costs `O(n)`.
+`head → A → B → C → null`
 
-## When to Use a Linked List
+### Doubly Linked List
 
-### Use a linked list when:
+`null ← A ←→ B ←→ C → null`
 
-- You do many insertions/deletions near the front
-- You don’t need random access by index
-- The data size changes frequently
+### Circular Linked List
 
-### Avoid linked lists when:
+`A → B → C → A`
 
-- You need fast indexing
-- Performance and cache locality matter
-- You can use a dynamic array instead (often better in practice)
+## 6. Use Cases
 
-## Real-World Uses
+* Frequent insertions/deletions
+* Dynamic data
+* Implementing stacks/queues
+* LRU cache internals
+* Hash table chaining
 
-- Implementing stacks/queues (sometimes)
-- Separate chaining in hash tables
-- Undo/redo lists (doubly linked list)
-- LRU cache internals (often doubly linked list + hashmap)
+## 7. Advantages & Disadvantages
 
-## Example Node (Conceptual)
+ADD THIS (missing currently):
 
-Singly linked list node:
+**Advantages**
+
+* Efficient insert/delete
+* Dynamic size
+
+**Disadvantages**
+
+* Slow access
+* Memory overhead
+
+## 8. Interview Patterns
+
+Common problem-solving patterns involving linked lists:
+
+* **Fast and slow pointers**: Used to detect cycles or find the middle
+  * Example: https://leetcode.com/problems/linked-list-cycle/
+
+* **Reversing a linked list**: Fundamental pointer manipulation problem
+  * Example: https://leetcode.com/problems/reverse-linked-list/
+
+* **Merging lists**: Combine sorted linked lists
+  * Example: https://leetcode.com/problems/merge-two-sorted-lists/
+
+* **Removing nth node from end**: Uses two-pointer technique
+  * Example: https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+## 9. Memory Notes
+
+* Extra memory overhead for pointers
+* Not cache-friendly (nodes scattered in memory)
+
+## 10. Arrays vs Linked Lists
+
+| Feature           | Array      | Linked List    |
+| ----------------- | ---------- | -------------- |
+| Random access     | O(1)       | O(n)           |
+| Insert/delete mid | O(n)       | O(1)*          |
+| Memory layout     | Contiguous | Non-contiguous |
+| Memory overhead   | Low        | Higher         |
+| Cache friendly    | Yes        | No             |
+
+*O(1) if node reference is known
+
+## 11. Important Concepts
+
+### Head and Tail
+
+* Head = first node
+* Tail = last node
+
+Tracking tail allows O(1) append.
+
+### Example Node (Python)
 
 ```python
 class Node:
@@ -131,17 +154,8 @@ class Node:
         self.next = None
 ```
 
-## Important Concepts
+## 12. Common Bugs
 
-### Head and Tail
-
-- **Head**: first node
-- **Tail**: last node (tail.next = null)
-
-Tracking a tail pointer can make appending `O(1)`.
-
-### Common Bugs
-
-- Losing references (node becomes unreachable)
-- Not updating pointers correctly during insert/delete
-- Off-by-one errors when traversing
+* Losing references
+* Incorrect pointer updates
+* Off-by-one traversal errors
