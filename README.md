@@ -83,6 +83,8 @@ Programmer-Notes/
 |   |   └── markdown-guide.md
 |   └── linux-shell-cheatsheet.md
 ├── web/
+|   ├── backend/
+|   |   └── flask-basics.md
 |   ├── frontend/
 |   │   ├── css-layout.md
 |   │   ├── flexbox-vs-grid.md
@@ -201,5 +203,12 @@ interpreters/
 ├── environments-and-scope.md
 ├── evaluation-strategies.md
 └── repl-design.md
+
+mobile/
+├── mobile-architecture.md
+├── navigation-patterns.md
+├── state-management.md
+├── performance.md
+└── platform-differences.md
 ```
 -->
