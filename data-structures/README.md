@@ -8,6 +8,7 @@ Current topics:
 * Linked Lists
 * Trees
 * Heaps
+* Graphs
 
 ## Structure
 

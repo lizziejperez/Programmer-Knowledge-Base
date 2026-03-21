@@ -51,6 +51,7 @@ Programmer-Notes/
 |       └── sampling-theory.md
 ├── data-structures/
 |   ├── arrays.md
+|   ├── graphs.md
 |   ├── heaps.md
 |   ├── linked-lists.md
 |   └── trees.md
@@ -145,10 +146,7 @@ data-science/
 data-structures/
 ├── stacks.md
 ├── queues.md
-├── trees.md
-├── heaps.md
-├── hash-tables.md
-└── graphs.md
+└── hash-tables.md
 
 fundamentals/
 ├── paradigms/
