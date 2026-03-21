@@ -54,7 +54,9 @@ Programmer-Notes/
 |   ├── graphs.md
 |   ├── heaps.md
 |   ├── linked-lists.md
-|   └── trees.md
+|   ├── trees.md
+|   ├── queues.md
+|   └── stacks.md
 ├── fundamentals/
 |   ├── paradigms/
 |   |   └── oop.md

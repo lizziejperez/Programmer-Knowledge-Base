@@ -9,6 +9,7 @@ Current topics:
 * Trees
 * Heaps
 * Graphs
+* Stacks & Queues
 
 ## Structure
 
