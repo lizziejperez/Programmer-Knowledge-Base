@@ -84,6 +84,21 @@ Median of Medians is a pivot-selection strategy that guarantees good worst-case 
 * Recursively find the median of those medians
 * Use that value as pivot
 
+### Pseudocode
+
+```
+choosePivot(A)
+    divide A into groups of 5
+    sort each group
+    let M = list of group medians
+
+    if length of M <= 5
+        sort M
+        return middle element of M
+
+    return choosePivot(M)
+```
+
 ### Running Time
 
 * Worst case: O(n)
