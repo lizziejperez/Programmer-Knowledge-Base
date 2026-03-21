@@ -1,248 +1,301 @@
 # Sorting Algorithms
 
-1. [Selection Sort](#selection-sort)
-2. [Bubble Sort](#bubble-sort)
-3. [Insertion Sort](#insertion-sort)
-4. [Merge Sort](#merge-sort)
-5. [Quick Sort](#quick-sort)
-6. [Heap Sort](#heap-sort)
-7. [Counting Sort](#counting-sort)
-8. [Radix Sort](#radix-sort)
+Sorting algorithms re-arrange data into a specific order, usually ascending or descending.
 
-## Selection Sort
-This sort keeps finding the smallest element and placing it in the growing sorted part (left side)
+## Table of Contents
 
-### Algorithm
-- Find index of smallest element
-- Swap w/ list[0] => now list[0] is sorted
-- Repeat for following unsorted indexes
+* [Overview](#1-overview)
+* [Comparison Summary](#2-comparison-summary)
+* [Selection Sort](#3-selection-sort)
+* [Bubble Sort](#4-bubble-sort)
+* [Insertion Sort](#5-insertion-sort)
+* [Merge Sort](#6-merge-sort)
+* [Quick Sort](#7-quick-sort)
+* [Heap Sort](#8-heap-sort)
+* [Counting Sort](#9-counting-sort)
+* [Radix Sort](#10-radix-sort)
+* [When to Use What](#11-when-to-use-what)
 
-```
-For i = 0 to n-2
-  minIndex = i
-  For j = i+1 to n-1
-    if list[j] < list[minIndex]
-      minIndex = j
-  swap list[i] with list[minIndex]
-```
-### Stats
-Memory Space | Running Time
---- | --- |
-θ(1) | θ(n^2)
+## 1. Overview
 
-Stable? |  In-place?
---- | --- |
-No | Yes
+Sorting is used to:
 
-## Bubble Sort
+* organize data
+* support efficient searching
+* prepare data for display or further processing
 
-### Algorithm
-- Pass through the list (left to right), comparing adjacent elements
-- If out of order, swap
-- Repeat, but decrease the ending index by 1, until ending index is 0
+Important comparison points:
 
-Note: After each pass, the next largest value will bubble to the right most index
+* running time
+* memory usage
+* stability
+* whether the algorithm is in-place
 
-```
-For i = 0 to n – 2, increasing by 1 each time
-  For each j from 0 to n-2-i, increasing by 1 each time
-	  If value at index j is greater than value at index j+1
-		  Swap value at index j with value at index j+1
-```
+## 2. Comparison Summary
 
-### Stats
-Memory Space | Running Time
---- | --- |
-θ(1) | Worst Case (need to sort through all sub-lists): θ(n^2)
--- | Best Case (list is already sorted): θ(n)
+| Algorithm      | Best Case    | Average Case | Worst Case  | Stable | In-Place |
+| -------------- | ------------ | ------------ | ----------- | ------ | -------- |
+| Selection Sort | O(n²)        | O(n²)        | O(n²)       | No     | Yes      |
+| Bubble Sort    | O(n)         | O(n²)        | O(n²)       | Yes    | Yes      |
+| Insertion Sort | O(n)         | O(n²)        | O(n²)       | Yes    | Yes      |
+| Merge Sort     | O(n log n)   | O(n log n)   | O(n log n)  | Yes    | No       |
+| Quick Sort     | O(n log n)   | O(n log n)   | O(n²)       | No     | Yes      |
+| Heap Sort      | O(n)         | O(n log n)   | O(n log n)  | No     | Yes      |
+| Counting Sort  | O(n + k)     | O(n + k)     | O(n + k)    | Yes    | No       |
+| Radix Sort     | O(d · f)     | O(d · f)     | O(d · f)    | Depends on helper sort | No |
 
-Stable? |  In-place?
---- | --- |
-Yes | Yes
+## 3. Selection Sort
 
-## Insertion Sort
+Selection sort repeatedly finds the smallest element in the unsorted portion and places it at the next sorted position.
 
 ### Algorithm
+
+* Find the index of the smallest remaining element
+* Swap it into the next sorted position
+* Repeat until the list is sorted
+
+Pseudocode:
+
 ```
-for i = 1 to list.len-1
-  j = i
-	temp = list[i]           
-	while ( j != 0 and temp < list[j-1] )
-    list[j] = list[j-1] // shift list[j-1] to the right
-    j = j-1
+for i = 0 to n - 2
+    minIndex = i
+    for j = i + 1 to n - 1
+        if list[j] < list[minIndex]
+            minIndex = j
+    swap list[i] with list[minIndex]
+```
+### Notes
+
+* Time: O(n²)
+* Space: O(1)
+* Stable: No
+* In-place: Yes
+
+## 4. Bubble Sort
+
+Bubble sort repeatedly compares adjacent elements and swaps them if they are out of order.
+
+### Algorithm
+
+* Pass through the array left to right
+* Swap adjacent out-of-order values
+* After each pass, the largest remaining value moves to the end
+
+Pseudocode:
+
+```
+for i = 0 to n - 2
+    for j = 0 to n - 2 - i
+        if list[j] > list[j + 1]
+            swap list[j] with list[j + 1]
+```
+### Notes
+
+* Time
+  * Best case: O(n)
+  * Worst case: O(n²)
+* Space: O(1)
+* Stable: Yes
+* In-place: Yes
+
+## 5. Insertion Sort
+
+Insertion sort builds a sorted section from left to right by inserting each new element into its correct position.
+
+### Algorithm
+
+Pseudocode:
+```
+for i = 1 to n - 1
+    temp = list[i]
+    j = i
+    while j > 0 and temp < list[j - 1]
+        list[j] = list[j - 1]
+        j = j - 1
     list[j] = temp
 ```
+### Notes
 
-### Stats
-Memory Space | Running Time
---- | --- |
-θ(1) | Worst Case (swap every time): θ(n^2)
--- | Best Case (no swaps):  T(n)=θ(n)
--- | Average Case (half of possible swaps occur): θ(n^2)
+* Time
+  * Best case: O(n)
+  * Average case: O(n²)
+  * Worst case: O(n²)
+* Space: O(1)
+* Stable: Yes
+* In-place: Yes
 
-Stable? |  In-place?
---- | --- |
-Yes | Yes
+## 6. Merge Sort
 
-## Merge Sort
-
-### Pseudocode
-- If the array has only one element (or is empty), it is already sorted
-- Merge sort the left half of the array
-- Merge sort the right half of the array
-- Merge the two sorted half-arrays into one sorted array
-		
-```
-function mergesort(A)
-  if len(A) > 1
-    m = len(A) // 2
-    L = mergesort(A[0,…,m-1])
-    R = mergesort(A[m,…,len(A)-1])
-    // Merge L and R
-    i,j,k = 0
-    while i < len(L) and j < len(R)
-      if L[i] <= R[j]
-        A[k] = L[i]
-        i+=1
-        k+=1
-      else
-        A[k] = R[j]
-        j+=1
-        k+=1
-    end
-    while i < len(L)
-      A[k] = L[i]
-      i+=1
-      k+=1
-    end
-		while j < len(R)
-		  A[k] = R[j]
-      j+=1
-      k+=1
-    end
-  end
-end
-```
-
-### Stats
-Memory Space | Running Time
---- | --- |
-Θ(n) | Merge operation: Θ(n)
--- | Merge sort: Θ(n∗lg⁡n) for all cases
-
-Stable? |  In-place?
---- | --- |
-Yes | No
-
-## Quick Sort
-
-### Pseudocode
-
-#### Partition
-```
-partition( array, start, end )
-  pivot = arr[end], t = start
-  for i = start to end –1
-    if arr[i] <= pivot
-      swap arr[i] and arr[t]
-      t++
-  swap arr[t] and arr[end]
-  return t
-```
-#### Quick Sort
-```
-quickSort( array, start, end )
-  if start < end
-    index = partition( array, start, end )
-    quickSort( array, start, index -1 )
-    quickSort( array, index + 1, end )
-```
-
-### Stats
-Memory Space | Running Time
---- | --- |
-Θ(1) | Best Case & Average Case: Θ(n*lg(n))
--- | Worst Case: Θ(n^2)
--- |  Partition: Θ(n)
-
-Stable? |  In-place?
---- | --- |
-No (b/c of swap at end of partition) | Yes
-
-## Heap Sort
+Merge sort uses divide and conquer.
 
 ### Algorithm
+
+* Split the list into two halves
+* Recursively sort each half
+* Merge the sorted halves
+
+Pseudocode:
+
+```
+function mergesort(A)
+    if len(A) > 1
+        m = len(A) // 2
+        L = mergesort(A[0...m-1])
+        R = mergesort(A[m...len(A)-1])
+
+        merge L and R back into A
+```
+### Notes
+
+* Time
+  * O(n log n) in all cases
+  * Merge operation: O(n)  
+* Space: O(n)
+* Stable: Yes
+* In-place: No
+
+## 7. Quick Sort
+
+Quick sort partitions the array around a pivot, then recursively sorts the left and right sides.
+
+### Partition
+
+```
+partition(array, start, end)
+    pivot = array[end]
+    t = start
+    for i = start to end - 1
+        if array[i] <= pivot
+            swap array[i] and array[t]
+            t++
+    swap array[t] and array[end]
+    return t
+```
+
+### Quick Sort
+
+```
+quickSort(array, start, end)
+    if start < end
+        index = partition(array, start, end)
+        quickSort(array, start, index - 1)
+        quickSort(array, index + 1, end)
+```
+
+### Notes
+
+* Time
+  * Best/Average: O(n log n)
+  * Worst: O(n²)
+  * Partition: O(n)
+* Space: O(1)
+* Stable: No
+* In-place: Yes
+
+## 8. Heap Sort
+
+Heap sort converts the data into a heap, then repeatedly extracts the root.
+
+### Algorithm
+
+* Build a max heap
+* Swap the root with the last element
+* Heapify the reduced heap
+* Repeat until sorted
+
+Pseudocode:
+
 ```
 Convert complete binary tree (CBT) to max heap
 For 1 = n to 2:
   Swap node 1 (root) w/ node i
   Max heapify root node on tree ignoring index i and up
 ```
-### Stats
-Memory Space | Running Time
---- | --- |
-Θ(1) | Best Case (all elements identical): Θ(n)
--- | Worst Case: Θ(n*lg(n))
 
-Stable? |  In-place?
---- | --- |
-No | Yes
+### Notes
 
-## Counting Sort
-Sorts a list `A` of non-negative integers
+* Time
+  * Best case (all elements identical): O(n) for heap construction
+  * Average/Worst: O(n log n)
+* Space: O(1)
+* Stable: No
+* In-place: Yes
 
-### Pseudocode
-`A` is a list of length `n` with maximum value `k`
+## 9. Counting Sort
+
+Counting sort works for non-negative integers in a known range.
+
+### Algorithm
+
+* Count occurrences of each value
+* Convert counts into cumulative positions
+* Place elements into output array
+* Copy back if needed
+
+Pseudocode:
+
+`A` is a list of length `n` with maximum value `k`.
+
 ```
 LOC = array of zeros of length k+1
 ANEW = array of zeros of length n
 
 // Count version of LOC
-for i = 0 to n-1
+For i = 0 to n-1:
   LOC[A[i]] = LOC[A[i]] + 1
-end
 
 // Make LOC cumulative
-for i = 1 to k
+For i = 1 to k:
   LOC[i] = LOC[i] + LOC[i-1]
-end
 
 // ANEW from LOC and A
-for i = n-1 down to 0
+For i = n-1 down to 0:
   ANEW[LOC[A[i]]-1] = A[i]
   LOC[A[i]]= LOC[A[i]] -1
-end
 
 // Copy ANEW to A
-for i = 0 to n-1
+For i = 0 to n-1:
   A[i] = ANEW[i]
-end
 ```
 
-### Stats
-Memory Space | Running Time
---- | --- |
-Θ(n+k) | Average Case: Θ(n+k)
-`k` = max value in list `A`
-`n` = # element in list `A`
+### Notes
 
-Stable? |  In-place?
---- | --- |
-Yes | No
+* Time: O(n + k)
+* Space: O(n + k)
+* Stable: Yes
+* In-place: No
 
-## Radix Sort
+## 10. Radix Sort
 
-### Pseudocode
+Radix sort sorts values digit by digit using a stable helper sort.
+
+### Algorithm
+
+* Sort by least significant digit
+* Move to the next digit
+* Repeat until all digits are processed
+
+Pseudocode:
+
 `A` is a list of integers
-Each integer looks like x_d ... x_1
+
+Each integer looks like: `x_d ... x_1`
+
 ```
-for i = 1 to d
+For i = 1 to d:
   stable sort A using digit i
 ```
 
-### Stats
-Memory Space | Running Time
---- | --- |
-? | Θ(d*f)
-`d` = width of largest number
-`f` is running time of helper sorting algorithm
+### Notes
+
+* Time: O(d · f)
+  * d = number of digits
+  * f = running time of helper stable sort
+
+## 11. When to Use What
+
+* Use **Insertion Sort** for very small or nearly sorted inputs
+* Use **Merge Sort** when stable O(n log n) behavior matters
+* Use **Quick Sort** when average-case speed is important
+* Use **Heap Sort** when in-place O(n log n) is needed
+* Use **Counting Sort** or **Radix Sort** when the input format allows non-comparison sorting

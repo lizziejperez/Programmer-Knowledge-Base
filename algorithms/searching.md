@@ -1,91 +1,137 @@
 # Searching Algorithms
 
-1. [Linear Search](#linear-search)
-2. [Binary Search](#binary-search)
-3. [Binary Search Tree (BST) Search](#binary-search-tree-bst-search)
-4. [Hash Lookup](#hash-lookup)
+Searching algorithms determine whether a value exists in a data set and, if so, where it is located.
 
-## Linear Search
+## Table of Contents
 
-### Pseudocode
-- Looking for a value in a list, we loop through all the elements in the list
-- If we find the element, we return its index in the list
-- If never found the element, return -1
+* [Overview](#1-overview)
+* [Linear Search](#2-linear-search)
+* [Binary Search](#3-binary-search)
+* [Binary Search Tree (BST) Search](#4-binary-search-tree-bst-search)
+* [Hash Lookup](#5-hash-lookup)
+* [When to Use What](#6-when-to-use-what)
 
-### Running Times
-- Best Case: Find `x` at index `0 = θ(1)`
-- Worst Case: `θ(n)`
-- Average Case: `θ(n)`
+## 1. Overview
 
-## Binary Search
+The best search algorithm depends on:
+
+* whether the data is sorted
+* whether random access is available
+* how the data is stored
+* whether preprocessing is allowed
+
+## 2. Linear Search
+
+Linear search checks each element one by one.
 
 ### Requirements
-- The list must be sorted.
-- Random access structure (like an array).
+
+* No sorting required
+* Works on arrays, linked lists, or general sequences
 
 ### Pseudocode
-- Set low = 0 and high = n - 1
-- While low ≤ high:
-  - mid = (low + high) / 2
-  - If list[mid] == x → return mid
-  - If x < list[mid] → search left half (high = mid - 1)
-  - Else → search right half (low = mid + 1)
-- If not found → return -1
 
-#### Example
 ```
-binSearch( list, key )
-  start = 0
-	end = list.length - 1
-	while( end >= start )
-	  middle = ( start + end ) / 2
-		if ( list[middle] == key )
-		  return middle // key found
-    else if ( list[middle] > key )
-		  end = middle - 1; // search left
-    else
-		  start = middle + 1 // search right
-  return -1 // key not found
+for i = 0 to n - 1
+    if list[i] == x
+        return i
+return -1
 ```
-		
-### Running Times
-- Best Case: Find value at the middle `= θ(1)`
-- Worst Case: Value is never found `= θ(log⁡(n))`
-- Average Case: `θ(log⁡(n))`
 
-## Binary Search Tree (BST) Search
+### Running Times
+
+* Best case: O(1)
+* Worst case: O(n)
+* Average case: O(n)
+
+## 3. Binary Search
+
+Binary search repeatedly halves the search space.
 
 ### Requirements
-- Tree satisfies BST property:
-  - Left subtree < root
-  - Right subtree > root
+
+* Data must be sorted
+* Random access structure required (such as an array)
 
 ### Pseudocode
-- Start at root
-- If `root` is null → return -1
-- If `root.value == x` → return node
-- If `x < root.value` → search left subtree
-- Else → search right subtree
+
+```
+binSearch(list, key)
+    start = 0
+    end = list.length - 1
+    while end >= start
+        middle = (start + end) / 2
+        if list[middle] == key
+            return middle
+        else if list[middle] > key
+            end = middle - 1
+        else
+            start = middle + 1
+    return -1
+```
 
 ### Running Times
-- Best Case: `θ(1)`
-- Average Case: `θ(log n)`
-- Worst Case: `θ(n)`  (unbalanced tree)
 
+* Best case: O(1)
+* Worst case: O(log n)
+* Average case: O(log n)
 
-## Hash Lookup
+## 4. Binary Search Tree (BST) Search
+
+BST search uses the tree ordering property.
 
 ### Requirements
-- Data stored in a hash table.
-- A hash function maps keys to indices.
+
+* Tree must satisfy BST property
+  * left subtree values < root
+  * right subtree values > root
 
 ### Pseudocode
-- Compute hash index of key `x`
-- Check bucket at that index
-  - If key exists → return associated value / index
-  - If not found → return -1
+
+```
+search(root, x)
+    if root is null
+        return -1
+    if root.value == x
+        return root
+    if x < root.value
+        return search(root.left, x)
+    return search(root.right, x)
+```
 
 ### Running Times
-- Best Case: `θ(1)`
-- Average Case: `θ(1)`
-- Worst Case: `θ(n)`  (due to collisions)
+
+* Best case: O(1)
+* Average case: O(log n)
+* Worst case: O(n)
+
+## 5. Hash Lookup
+
+Hash lookup uses a hash function to map keys to positions.
+
+### Requirements
+
+* Data stored in a hash table
+* Hash function maps keys to indices
+
+### Pseudocode
+```
+compute hash index of key x
+check bucket at that index
+    if key exists
+        return associated value
+    otherwise
+        return -1
+```
+### Running Times
+
+* Best case: O(1)
+* Average case: O(1)
+* Worst case: O(n) due to collisions
+
+## 6. When to Use What
+
+* Use **Linear Search** when data is small or unsorted
+* Use **Binary Search** when data is sorted and random access is available
+* Use **BST Search** when data is stored in a binary search tree
+* Use **Hash Lookup** when fast average-case access is the priority
