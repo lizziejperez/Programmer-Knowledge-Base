@@ -1,12 +1,6 @@
 # Programmer Knowledge Base
 
-A structured, self-maintained computer science reference system covering:
-
-- Data structures
-- Algorithms
-- Programming language theory
-- Web fundamentals
-- Game development
+A structured, self-maintained computer science reference system covering core concepts, practical tools, and applied programming knowledge.
 
 Designed as a long-term technical knowledge base to reinforce systems-level understanding.
 
@@ -14,103 +8,86 @@ Designed as a long-term technical knowledge base to reinforce systems-level unde
 
 This repository exists to:
 
-- Reinforce core computer science fundamentals
-- Connect theory (e.g., runtime analysis, language design, memory models) to implementation
-- Maintain organized, searchable technical references
-- Document insights gained from building real systems
+* Reinforce core computer science fundamentals
+* Connect theory (e.g., runtime analysis, language design, memory models) to implementation
+* Maintain organized, searchable technical references
+* Document insights gained from building real systems
 
 It is continuously refined through project work, review of past coursework, and ongoing study.
 
-## File Structure
+## Explore by Topic
 
-The high-level domain structure is summarized below, followed by the full directory tree.
+### Core Sections
 
-### Main Folders
+* [Algorithms](algorithms/README.md)
+  Core algorithmic techniques including searching, sorting, selection, and graph algorithms.
 
-- `algorithms/` - Core algorithmic techniques including searching, sorting, and time complexity analysis.
-- `data-science/` - Notes on statistical foundations and applied data work, including R fundamentals and sampling theory.
-- `data-structures/` - Fundamental data structures such as arrays and linked lists, with complexity and memory considerations.
-- `fundamentals/` - Core computer science concepts including runtime analysis, programming paradigms, bitwise operations, and language theory foundations.
-- `game-dev/` - Game development principles and Unity-specific structure, including timing systems and project organization.
-- `languages/` - Language-specific syntax and feature references (C#, Java, JavaScript, Python, TypeScript).
-- `tools/` - Developer tooling references including Git workflows, Markdown usage, and Linux shell commands.
-- `web/` - Web development fundamentals covering frontend basics and core client-server concepts.
+* [Data Structures](data-structures/README.md)
+  Fundamental data structures including arrays, linked lists, trees, heaps, graphs, and hash tables.
 
-### Full File Listing
+* [Fundamentals](fundamentals/README.md)
+  Core computer science concepts such as runtime analysis, programming paradigms, and language theory.
 
-```
-Programmer-Notes/
-├── algorithms/
-|   ├── searching.md
-│   └── sorting.md
-├── data-science/
-|   ├── r/
-|   |   ├── r-basics.md
-|   |   └── dataframes.md
-|   └── statistics/
-|       └── sampling-theory.md
-├── data-structures/
-|   ├── arrays.md
-|   ├── graphs.md
-|   ├── hash-tables.md
-|   ├── heaps.md
-|   ├── linked-lists.md
-|   ├── trees.md
-|   ├── queues.md
-|   └── stacks.md
-├── fundamentals/
-|   ├── paradigms/
-|   |   └── oop.md
-|   ├── bitwise-operators.md
-|   ├── programming-languages-overview.md
-|   └── running-time.md
-├── game-dev/
-|   ├── fundamentals/
-|   |   ├── coordinate-systems.md
-|   |   ├── delta-time.md
-|   |   └── game-loop.md
-|   └── unity/
-|       ├── prefabs.md
-|       └── unity-project-structure.md
-├── languages/
-|   ├── c.md
-|   ├── csharp.md
-|   ├── java.md
-|   ├── javascript.md
-|   ├── python.md
-│   └── typescript.md
-├── mobile/
-│   └── react-native.md
-├── tools/
-│   ├── git/
-|   |   ├── commit-guide.md
-|   |   ├── git-commands.md
-|   |   ├── gitignore-guide.md
-|   |   └── markdown-guide.md
-|   └── linux-shell-cheatsheet.md
-├── web/
-|   ├── backend/
-|   |   └── flask-basics.md
-|   ├── frontend/
-|   │   ├── css-layout.md
-|   │   ├── flexbox-vs-grid.md
-|   |   └── html-basics.md
-│   └── fundamentals/
-|       ├── client-vs-server.md
-|       └── url-structure.md
-└── README.md
-```
+* [Languages](languages/README.md)
+  Language-specific syntax, features, and comparisons across multiple programming languages.
+
+* [Tools](tools/README.md)
+  Developer tooling including Git workflows, Markdown usage, and command-line utilities.
+
+### In Progress
+
+These sections are actively being developed and may not yet have full documentation structure:
+
+* `web/` — frontend, backend, and web fundamentals
+* `game-dev/` — game development concepts and Unity notes
+* `mobile/` — mobile development (React Native and related concepts)
+* `data-science/` — statistics and data analysis
+
+## How This Repository Is Structured
+
+Each section is organized around a consistent documentation pattern:
+
+* Concept overview
+* Key characteristics or requirements
+* Time complexity (when applicable)
+* Structure and representation
+* Common operations or algorithms
+* Variants and tradeoffs
+* Use cases
+* Interview-relevant patterns
+
+This structure is designed to make topics:
+
+* Easy to compare
+* Easy to review
+* Useful for both learning and interview preparation
 
 ## Ongoing Development
 
 This knowledge base evolves through:
 
-- Reviewing and consolidating past coursework
-- Reinforcing core computer science fundamentals
-- Documenting concepts encountered in active projects
-- Preparing for technical interviews
+* Reviewing and consolidating past coursework
+* Reinforcing core computer science fundamentals
+* Documenting concepts encountered in active projects
+* Preparing for technical interviews
 
 Topics are added deliberately as understanding deepens or new domains become technically relevant.
+
+## Full File Structure
+
+```
+Programmer-Knowledge-Base/
+├── algorithms/
+├── data-science/
+├── data-structures/
+├── fundamentals/
+├── game-dev/
+├── languages/
+├── mobile/
+├── tools/
+├── web/
+└── README.md
+```
 
 <!--
 ## Future Expansion
@@ -118,17 +95,13 @@ Topics are added deliberately as understanding deepens or new domains become tec
 Planned additions include:
 
 ```
-algorithms/
-├── selection.md        # k-th order statistic + quickselect
-└── graph.md
-
 data-science/
 ├── statistics/
 │   ├── probability-basics.md
 │   ├── distributions.md
 │   ├── hypothesis-testing.md
 │   ├── confidence-intervals.md
-│   └──  regression.md
+│   └── regression.md
 ├── concepts/
 │   ├── bias-vs-variance.md
 │   ├── overfitting.md
@@ -145,13 +118,6 @@ data-science/
     ├── proc-sql.md
     ├── proc-reg.md
     └── proc-means.md
-
-fundamentals/
-├── paradigms/
-│   ├── functional.md
-│   ├── procedural.md
-│   └── logic.md
-└── typing-systems.md
 
 game-dev/
 ├── fundamentals/
