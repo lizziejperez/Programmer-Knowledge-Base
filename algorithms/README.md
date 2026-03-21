@@ -7,7 +7,7 @@ This folder contains notes on core algorithm families, with a focus on how they 
 - [Searching](searching.md)
 - [Sorting](sorting.md)
 - [Selection](selection.md)
-<!-- - [Graphs](graph.md) -->
+- [Graphs](graph.md)
 
 ## Purpose
 
