@@ -52,6 +52,7 @@ Programmer-Notes/
 ├── data-structures/
 |   ├── arrays.md
 |   ├── graphs.md
+|   ├── hash-tables.md
 |   ├── heaps.md
 |   ├── linked-lists.md
 |   ├── trees.md
@@ -144,11 +145,6 @@ data-science/
     ├── proc-sql.md
     ├── proc-reg.md
     └── proc-means.md
-
-data-structures/
-├── stacks.md
-├── queues.md
-└── hash-tables.md
 
 fundamentals/
 ├── paradigms/
