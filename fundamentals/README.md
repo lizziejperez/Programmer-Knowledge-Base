@@ -4,14 +4,17 @@ This folder contains core computer science concepts that underpin programming, l
 
 ## Topics
 
-* [Object-Oriented Programming (OOP)](paradigms/oop.md)
-* [Functional Programming](paradigms/functional.md)
-* [Procedural Programming](paradigms/procedural.md)
-* [Logic Programming](paradigms/logic.md)
 * [Bitwise Operators](bitwise-operators.md)
 * [Programming Languages Overview](programming-languages-overview.md)
 * [Running Time (Big O)](running-time.md)
 * [Typing Systems](typing-systems.md)
+
+### Paradigms
+
+* [Object-Oriented Programming (OOP)](paradigms/oop.md)
+* [Functional Programming](paradigms/functional.md)
+* [Procedural Programming](paradigms/procedural.md)
+* [Logic Programming](paradigms/logic.md)
 
 ## Purpose
 
