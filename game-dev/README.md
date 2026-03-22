@@ -14,6 +14,10 @@ This folder contains notes on game development concepts, including real-time sys
 
 * [Input Handling](mechanics/input-handling.md)
 
+### Architecture
+
+* [State Machines](architecture/state-machines.md)
+
 ### Unity
 
 * [Prefabs](unity/prefabs.md)
@@ -50,7 +54,6 @@ game-dev/
 │   ├── coordinate-systems.md
 │   └── collision-basics.md
 ├── architecture/
-│   ├── state-machines.md
 │   ├── entity-component-system.md
 │   └── scene-management.md
 ├── mechanics/
