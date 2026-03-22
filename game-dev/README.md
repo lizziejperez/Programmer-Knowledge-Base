@@ -14,6 +14,7 @@ This folder contains notes on game development concepts, including real-time sys
 ### Mechanics
 
 * [Input Handling](mechanics/input-handling.md)
+* [Animation Basics](mechanics/animation-basics.md)
 
 ### Architecture
 
@@ -58,7 +59,6 @@ game-dev/
 │   └── scene-management.md
 ├── mechanics/
 │   ├── physics.md
-│   ├── animation-basics.md
 │   └── ai-behavior.md
 ├── optimization/
 │   ├── performance-tips.md
