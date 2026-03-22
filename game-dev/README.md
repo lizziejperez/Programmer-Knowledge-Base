@@ -9,6 +9,7 @@ This folder contains notes on game development concepts, including real-time sys
 * [Coordinate Systems](fundamentals/coordinate-systems.md)
 * [Delta Time](fundamentals/delta-time.md)
 * [Game Loop](fundamentals/game-loop.md)
+* [Collision Basics](fundamentals/collision-basics.md)
 
 ### Mechanics
 
@@ -51,8 +52,7 @@ Planned additions include:
 ```
 game-dev/
 ├── fundamentals/
-│   ├── coordinate-systems.md
-│   └── collision-basics.md
+│   └── coordinate-systems.md
 ├── architecture/
 │   ├── entity-component-system.md
 │   └── scene-management.md
