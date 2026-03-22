@@ -11,7 +11,7 @@ This folder contains core computer science concepts that underpin programming, l
 * [Bitwise Operators](bitwise-operators.md)
 * [Programming Languages Overview](programming-languages-overview.md)
 * [Running Time (Big O)](running-time.md)
-<!-- * [Typing Systems](typing-systems.md) -->
+* [Typing Systems](typing-systems.md)
 
 ## Purpose
 
