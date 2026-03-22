@@ -38,10 +38,10 @@ It is continuously refined through project work, review of past coursework, and 
 
 These sections are actively being developed and may not yet have full documentation structure:
 
-* `web/` — frontend, backend, and web fundamentals
-* `game-dev/` — game development concepts and Unity notes
-* `mobile/` — mobile development (React Native and related concepts)
-* `data-science/` — statistics and data analysis
+* [Web](web/README.md) — frontend, backend, and web fundamentals
+* [Data Science](data-science/README.md) — statistics and data analysis
+* [Game Dev](game-dev/README.md) — game development concepts and Unity notes
+* [Mobile](mobile/README.md) — mobile development (React Native and related concepts)
 
 ## How This Repository Is Structured
 
@@ -88,91 +88,3 @@ Programmer-Knowledge-Base/
 ├── web/
 └── README.md
 ```
-
-<!--
-## Future Expansion
-
-Planned additions include:
-
-```
-data-science/
-├── statistics/
-│   ├── probability-basics.md
-│   ├── distributions.md
-│   ├── hypothesis-testing.md
-│   ├── confidence-intervals.md
-│   └── regression.md
-├── concepts/
-│   ├── bias-vs-variance.md
-│   ├── overfitting.md
-│   ├── model-evaluation.md
-│   ├── feature-engineering.md
-│   └── data-cleaning.md
-├── r/
-│   ├── ggplot.md
-|   ├── statistical-tests.md
-│   └── modeling-in-r.md
-└── sas/
-    ├── sas-basics.md
-    ├── data-steps.md
-    ├── proc-sql.md
-    ├── proc-reg.md
-    └── proc-means.md
-
-game-dev/
-├── fundamentals/
-│   ├── coordinate-systems.md
-│   └── collision-basics.md
-├── architecture/
-│   ├── state-machines.md
-│   ├── entity-component-system.md
-│   └── scene-management.md
-├── mechanics/
-│   ├── input-handling.md
-│   ├── physics.md
-│   ├── animation-basics.md
-│   └── ai-behavior.md
-├── optimization/
-│   ├── performance-tips.md
-│   └── memory-management.md
-└── unity/
-    ├── unity-project-structure.md
-    └── scripting-patterns.md
-
-web/
-├── fundamentals/
-│   └── dns-and-ip.md
-├── frontend/
-│   ├── dom-manipulation.md
-│   ├── async-await.md
-│   └── api-calls.md
-├── backend/
-│   ├── rest-api.md
-│   ├── authentication.md
-│   ├── sessions-vs-jwt.md
-│   └── mvc-pattern.md
-├── databases/
-│   ├── sql-basics.md
-│   ├── indexing.md
-│   └── normalization.md
-└── deployment/
-    ├── hosting-basics.md
-    ├── environment-variables.md
-    └── docker-overview.md
-
-interpreters/
-├── lexical-analysis.md
-├── parsing.md
-├── abstract-syntax-tree.md
-├── environments-and-scope.md
-├── evaluation-strategies.md
-└── repl-design.md
-
-mobile/
-├── mobile-architecture.md
-├── navigation-patterns.md
-├── state-management.md
-├── performance.md
-└── platform-differences.md
-```
--->
