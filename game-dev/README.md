@@ -10,6 +10,10 @@ This folder contains notes on game development concepts, including real-time sys
 * [Delta Time](fundamentals/delta-time.md)
 * [Game Loop](fundamentals/game-loop.md)
 
+### Mechanics
+
+* [Input Handling](mechanics/input-handling.md)
+
 ### Unity
 
 * [Prefabs](unity/prefabs.md)
@@ -50,7 +54,6 @@ game-dev/
 │   ├── entity-component-system.md
 │   └── scene-management.md
 ├── mechanics/
-│   ├── input-handling.md
 │   ├── physics.md
 │   ├── animation-basics.md
 │   └── ai-behavior.md
