@@ -19,20 +19,11 @@ It is continuously refined through project work, review of past coursework, and 
 
 ### Core Sections
 
-* [Algorithms](algorithms/README.md)
-  Core algorithmic techniques including searching, sorting, selection, and graph algorithms.
-
-* [Data Structures](data-structures/README.md)
-  Fundamental data structures including arrays, linked lists, trees, heaps, graphs, and hash tables.
-
-* [Fundamentals](fundamentals/README.md)
-  Core computer science concepts such as runtime analysis, programming paradigms, and language theory.
-
-* [Languages](languages/README.md)
-  Language-specific syntax, features, and comparisons across multiple programming languages.
-
-* [Tools](tools/README.md)
-  Developer tooling including Git workflows, Markdown usage, and command-line utilities.
+* [Algorithms](algorithms/README.md) — Core algorithmic techniques including searching, sorting, selection, and graph algorithms.
+* [Data Structures](data-structures/README.md) — Fundamental data structures including arrays, linked lists, trees, heaps, graphs, and hash tables.
+* [Fundamentals](fundamentals/README.md) — Core computer science concepts such as runtime analysis, programming paradigms, and language theory.
+* [Languages](languages/README.md) — Language-specific syntax, features, and comparisons across multiple programming languages.
+* [Tools](tools/README.md) — Developer tooling including Git workflows, Markdown usage, and command-line utilities.
 
 ### In Progress
 
