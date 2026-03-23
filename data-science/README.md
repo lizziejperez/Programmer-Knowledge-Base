@@ -4,6 +4,8 @@ This folder contains notes on statistical concepts and applied data analysis, wi
 
 ## Topics
 
+* [Data Analysis Workflow](data-analysis-workflow.md)
+
 ### R
 
 * [R Basics](r/r-basics.md)
