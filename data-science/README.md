@@ -6,6 +6,10 @@ This folder contains notes on statistical concepts and applied data analysis, wi
 
 * [Data Analysis Workflow](data-analysis-workflow.md)
 
+### Concepts
+
+* [Data Cleaning](concepts/data-cleaning.md)
+
 ### R
 
 * [R Basics](r/r-basics.md)
@@ -40,6 +44,8 @@ Planned additions include:
 
 ```
 data-science/
+├── excel-basics.md (upcoming)
+├── sql-basics.md (upcoming)
 ├── statistics/
 │   ├── probability-basics.md
 │   ├── distributions.md
@@ -51,7 +57,7 @@ data-science/
 │   ├── overfitting.md
 │   ├── model-evaluation.md
 │   ├── feature-engineering.md
-│   └── data-cleaning.md
+│   └── data-visualization.md (upcoming)
 ├── r/
 │   ├── ggplot.md
 |   ├── statistical-tests.md
