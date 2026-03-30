@@ -5,7 +5,7 @@ This folder contains notes on programming languages, focusing on syntax, feature
 ## Topics
 
 * [C](c.md)
-* [C#](csharp/csharp.mdcsharp.md)
+* [C#](csharp/csharp.md)
     * [XML Documentation Comments](csharp/xml-doc-comments.md)
 * [Java](java.md)
 * [JavaScript](javascript.md)
